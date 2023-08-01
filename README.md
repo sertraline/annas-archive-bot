@@ -1,6 +1,7 @@
 # annas-archive-bot
 
 How to run:
+<img align="right" width="auto" height="400" src="preview.png?raw=true">
 
 1. Create your bot at @BotFather
 2. Copy the access token
@@ -15,4 +16,4 @@ How to run:
    `go get`  
    `go run .`
 
-![Preview](preview.png?raw=true "Title")
+Default command the bot will react to is `/books search`. The command can be edited in `main.go` file.  
