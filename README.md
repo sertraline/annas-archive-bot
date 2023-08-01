@@ -16,4 +16,5 @@ How to run:
    `go get`  
    `go run .`
 
-Default command the bot will react to is `/books search`. The command can be edited in `main.go` file.  
+Default command the bot will react to is `/books`.  
+The command can be edited in `main.go` file.  
