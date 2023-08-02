@@ -404,8 +404,13 @@ func DownloadItem(c tele.Context) error {
 	rows = append(rows, selector.Row(bookBtnBack))
 	fmt.Println("URLS list: ", urls)
 	for i, u := range urls {
-		if strings.HasPrefix(u, "/") {
+		// skip URLs that require authentication
+		if strings.HasPrefix(u, "/fast_download") {
 			continue
+		}
+		// these URLs require captcha verification
+		if strings.HasPrefix(u, "/slow_download") {
+			u = "https://annas-archive.org" + u
 		}
 		if len(rows) > 4 {
 			break
